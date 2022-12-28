@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap");
+@font-face {
+  font-family: "maharlika";
+  src: url("./media/maharlika.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.left {
+  display: grid;
+  place-items: center;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "maharlika";
+  font-weight: 200 !important;
+  font-size: 20px;
+  background-color: wheat;
+}
+
+.summer {
+  font-weight: 600;
+  font-size: 80px;
+  color: brown;
+}
+
+.cards-container,
+.card {
+  aspect-ratio: 5/7;
+  width: 30vmin;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 2px 3px 5px #0000005b;
+  width: 30vmin;
+  aspect-ratio: 5 / 7;
+  border-radius: 1vmin;
+  position: absolute;
+  transition: transform 700ms cubic-bezier(0.05, 0.43, 0.25, 0.95),
+    rotate 700ms cubic-bezier(0.05, 0.43, 0.25, 0.95);
+  cursor: pointer;
+}
+
+.card:nth-child(1) {
+  rotate: 5deg;
+  transform: translateX(5%);
+  background-image: url(./media/1.jpg);
+  background-size: cover;
+}
+.card:nth-child(2) {
+  rotate: -5deg;
+  transform: translateX(-5%);
+  background-image: url(./media/3.jpg);
+  background-size: cover;
+}
+
+.card:nth-child(3) {
+  rotate: -10deg;
+  transform: translateX(-15%);
+  background-image: url(./media/2.jpg);
+  background-size: cover;
+}
+
+.cards-container:hover > .card:nth-child(1) {
+  rotate: 10deg;
+  transform: translateX(30%);
+}
+
+.cards-container:hover > .card:nth-child(2) {
+  transform: translateX(10%);
+  rotate: 3deg;
+}
+
+.cards-container:hover > .card:nth-child(3) {
+  transform: translateX(-40%);
+  rotate: -20deg;
+}
